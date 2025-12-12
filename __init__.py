@@ -212,13 +212,13 @@ class OCIO_Preferences(AddonPreferences):
             ('CUSTOM', "Custom", "Use a custom GitHub repository URL"),
         ],
         default='AIO_OCIO',
-    )
+    ) # type: ignore
     
     custom_repo_url: StringProperty(
         name="Custom Repository URL",
         description="GitHub repository URL for custom OCIO config",
         default="",
-    )
+    ) # type: ignore
     
     def draw(self, context):
         layout = self.layout
