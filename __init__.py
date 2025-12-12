@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-# AIO-OCIO Updater - Install and update AIO-OCIO color configuration
+# AIO-OCIO Installer - Install and update AIO-OCIO color configuration
 
 bl_info = {
-    "name": "AIO-OCIO Updater",
+    "name": "AIO-OCIO Installer",
     "author": "Roland Vyens",
     "version": (1, 1, 0),
     "blender": (4, 1, 0),
@@ -146,7 +146,7 @@ def get_latest_release_info(api_url):
     try:
         request = urllib.request.Request(
             api_url,
-            headers={'User-Agent': 'AIO-OCIO-Updater'}
+            headers={'User-Agent': 'AIO-OCIO-Installer'}
         )
         response = urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT)
         data = json.loads(response.read().decode('utf-8'))
@@ -165,7 +165,7 @@ def download_with_progress(url, dest_path, progress_callback):
     try:
         request = urllib.request.Request(
             url,
-            headers={'User-Agent': 'AIO-OCIO-Updater'}
+            headers={'User-Agent': 'AIO-OCIO-Installer'}
         )
         response = urllib.request.urlopen(request, timeout=NETWORK_TIMEOUT)
         total_size = response.getheader('Content-Length')
@@ -200,7 +200,7 @@ def download_with_progress(url, dest_path, progress_callback):
 
 
 class OCIO_Preferences(AddonPreferences):
-    """Addon preferences for AIO-OCIO Updater."""
+    """Addon preferences for AIO-OCIO Installer."""
     bl_idname = __package__
     
     ocio_source: EnumProperty(
@@ -428,10 +428,10 @@ class OCIO_OT_install_update(Operator):
         return {'RUNNING_MODAL'}
 
 
-class OCIO_PT_updater(Panel):
-    """AIO-OCIO Updater Panel"""
-    bl_label = "AIO-OCIO Updater"
-    bl_idname = "RENDER_PT_aio_ocio_updater"
+class OCIO_PT_Installer(Panel):
+    """AIO-OCIO Installer Panel"""
+    bl_label = "AIO-OCIO Installer"
+    bl_idname = "RENDER_PT_aio_ocio_Installer"
     bl_space_type = 'PROPERTIES'
     bl_region_type = 'WINDOW'
     bl_context = "render"
@@ -509,7 +509,7 @@ classes = (
     OCIO_Preferences,
     OCIO_OT_open_repo,
     OCIO_OT_install_update,
-    OCIO_PT_updater,
+    OCIO_PT_Installer,
 )
 
 
