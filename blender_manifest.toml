@@ -7,7 +7,7 @@ maintainer = "Roland Vyens <roland@example.com>"
 type = "add-on"
 
 # Blender version requirements
-blender_version_min = "4.1.0"
+blender_version_min = "4.2.0"
 
 # License
 license = ["SPDX:GPL-3.0-or-later"]
