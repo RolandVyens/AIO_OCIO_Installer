@@ -1,6 +1,6 @@
 schema_version = "1.0.0"
 id = "aio_ocio_updater"
-version = "1.0.0"
+version = "1.1.0"
 name = "AIO-OCIO Updater"
 tagline = "Install and update AIO-OCIO color configuration for Blender"
 maintainer = "Roland Vyens <roland@example.com>"
