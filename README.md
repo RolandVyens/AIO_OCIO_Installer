@@ -1,4 +1,4 @@
-# AIO-OCIO Updater
+# AIO-OCIO Installer
 
 **What it is:**
 A Blender addon that manages OpenColorIO (OCIO) configurations, specifically designed for AIO-OCIO and PixelManager.
